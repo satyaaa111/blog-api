@@ -1,0 +1,24 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "Backend for the blog app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyaaa111/blog-api.git"
+  },
+  "author": "satya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyaaa111/blog-api/issues"
+  },
+  "homepage": "https://github.com/satyaaa111/blog-api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "zod": "^3.22.4"
+  }
+}
