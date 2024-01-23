@@ -4,11 +4,9 @@ const bcrypt = require('bcrypt');
 // Replace this with your actual user database
 const users = [];
 
-// Middleware to parse JSON in requests
-app.use(express.json());
-
 // Signup route
-app.post('/signup', async (req, res) => {
+const signUp = async (req, res) => {
+  
   const { username, password } = req.body;
 
   // Check if the username is already taken
@@ -35,8 +33,8 @@ app.post('/signup', async (req, res) => {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
   }
-});
+};
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = {
+  signUp,
+};
