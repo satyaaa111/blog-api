@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 
 //Blogs schema as for what type of description there is to put
 const userSchema = {
-    
   name : {
      type: String,
      required: true
@@ -16,6 +15,10 @@ const userSchema = {
   password: {
     type: String,
     required: true
+  },
+  isVerified:{
+    type: Boolean,
+    default: false,
   },
   date: {
     type: Date,
