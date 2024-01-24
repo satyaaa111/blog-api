@@ -1,10 +1,11 @@
 const bcrypt = require('bcrypt');
 const User = require('../../models/users.js'); // Import the User model
-
+const validatePassword = require("../../utils/validatePass.js")
 // Signup route
 const signUp = async (req, res) => {
-
-  const { name, email, password } = req.body;
+  
+  validatePassword(req, res, async ()=> {
+    const { name, email, password } = req.body;
 
   try {
     // Check if the username is already taken
@@ -32,6 +33,8 @@ const signUp = async (req, res) => {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
   }
+  })
+
 };
 
 module.exports = {
