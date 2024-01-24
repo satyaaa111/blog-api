@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const verifyEmail = async (req, res)=>{
 
     const {token} = req.params; 
-  
+
     // Verifying the JWT token  
     jwt.verify(token, process.env.SECRET_KEY,async function(err, decoded) { 
         if (err) { 
